@@ -1,0 +1,4 @@
+[install]
+# Use hardlinks to save disk space across workspace packages
+# Bun defaults are fine, but we can be explicit
+saved = false
