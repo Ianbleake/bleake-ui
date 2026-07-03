@@ -12,6 +12,19 @@
         "vitest": "3.2.4",
       },
     },
+    "packages/bleake-ui": {
+      "name": "@bleakedev/bleake-ui",
+      "version": "0.0.0",
+      "dependencies": {
+        "@bleakedev/bleake-components": "workspace:*",
+        "@bleakedev/bleake-core": "workspace:*",
+        "@bleakedev/bleake-styles": "workspace:*",
+      },
+      "peerDependencies": {
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+      },
+    },
     "packages/components": {
       "name": "@bleakedev/bleake-components",
       "version": "0.0.0",
@@ -102,6 +115,8 @@
     "@bleakedev/bleake-core": ["@bleakedev/bleake-core@workspace:packages/core"],
 
     "@bleakedev/bleake-styles": ["@bleakedev/bleake-styles@workspace:packages/styles"],
+
+    "@bleakedev/bleake-ui": ["@bleakedev/bleake-ui@workspace:packages/bleake-ui"],
 
     "@date-fns/tz": ["@date-fns/tz@1.5.0", "", {}, "sha512-lwYN/vDPeNRULcepoE/LO2Pgx+7/RV+S9ARfbc9lr2DtGkOD7pAiruHvbR1RX3Qyf6ja47EWJDMsNK5vK08DJg=="],
 

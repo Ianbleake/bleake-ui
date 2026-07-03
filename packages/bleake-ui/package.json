@@ -1,0 +1,29 @@
+{
+	"name": "@bleakedev/bleake-ui",
+	"version": "0.0.0",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		},
+		"./styles.css": "./dist/styles.css"
+	},
+	"files": ["dist"],
+	"sideEffects": ["**/*.css"],
+	"scripts": {
+		"build": "tsup && bun run copy:css",
+		"copy:css": "cp node_modules/@bleakedev/bleake-styles/dist/styles.css dist/styles.css",
+		"dev": "tsup --watch"
+	},
+	"peerDependencies": {
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"dependencies": {
+		"@bleakedev/bleake-core": "workspace:*",
+		"@bleakedev/bleake-components": "workspace:*",
+		"@bleakedev/bleake-styles": "workspace:*"
+	}
+}
