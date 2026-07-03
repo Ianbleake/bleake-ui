@@ -1,2 +1,2 @@
-// Placeholder — components are added in Phase 3
-export {};
+export * from "./primitives";
+export * from "./ui";

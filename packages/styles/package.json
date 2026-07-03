@@ -6,7 +6,10 @@
 		".": "./dist/styles.css",
 		"./theme": "./src/theme.css"
 	},
-	"files": ["dist", "src/theme.css"],
+	"files": [
+		"dist",
+		"src/theme.css"
+	],
 	"sideEffects": true,
 	"scripts": {
 		"build": "bun run build:css",

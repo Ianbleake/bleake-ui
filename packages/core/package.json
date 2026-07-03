@@ -10,8 +10,13 @@
 		},
 		"./tokens.css": "./src/theme/tokens.css"
 	},
-	"files": ["dist", "src/theme/tokens.css"],
-	"sideEffects": ["**/*.css"],
+	"files": [
+		"dist",
+		"src/theme/tokens.css"
+	],
+	"sideEffects": [
+		"**/*.css"
+	],
 	"scripts": {
 		"build": "tsup",
 		"dev": "tsup --watch"
