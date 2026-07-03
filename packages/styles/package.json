@@ -1,0 +1,24 @@
+{
+	"name": "@bleakedev/bleake-styles",
+	"version": "0.0.0",
+	"type": "module",
+	"exports": {
+		".": "./dist/styles.css",
+		"./theme": "./src/theme.css"
+	},
+	"files": ["dist", "src/theme.css"],
+	"sideEffects": true,
+	"scripts": {
+		"build": "bun run build:css",
+		"build:css": "bunx @tailwindcss/cli -i src/theme.css -o dist/styles.css --minify",
+		"dev": "bunx @tailwindcss/cli -i src/theme.css -o dist/styles.css --watch"
+	},
+	"dependencies": {
+		"@bleakedev/bleake-core": "workspace:*",
+		"@bleakedev/bleake-components": "workspace:*",
+		"tailwindcss": "^4.2.0"
+	},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.2.0"
+	}
+}

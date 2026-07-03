@@ -1,0 +1,26 @@
+/*
+ * bleake-styles — compiled Tailwind v4 CSS for the bleake-ui design system.
+ *
+ * This stylesheet imports the design tokens from @bleakedev/bleake-core
+ * and registers the components package as a content source so Tailwind
+ * generates only the utilities that the components actually use.
+ *
+ * The consumer imports the COMPILED output (dist/styles.css), not this file.
+ * This file is the source for the build step.
+ */
+
+/* Tailwind base + utilities + components */
+@import "tailwindcss";
+
+/* Design tokens — light + dark themes, @theme inline mapping, base layer.
+   tokens.css does NOT import tailwindcss itself; it only defines variables
+   and the @custom-variant dark directive. Tailwind is imported here. */
+@import "@bleakedev/bleake-core/tokens.css";
+
+/*
+ * Content detection: register the components package explicitly.
+ * Tailwind v4 ignores node_modules by default, so we point @source
+ * at the workspace package where our React components live.
+ */
+@source "../node_modules/@bleakedev/bleake-components";
+@source "../node_modules/@bleakedev/bleake-core";
