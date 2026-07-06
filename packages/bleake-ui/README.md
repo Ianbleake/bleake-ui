@@ -116,6 +116,18 @@ accordion, alert-dialog, avatar, badge, breadcrumb, button-group, button, calend
 
 actions-menu, confirm-dialog, decorative (glow + wave-layer), image, modal, steps, truncated-text
 
+### Patterns (8)
+
+**Animations:** slide-up
+
+**Feedback:** empty, error-boundary
+
+**Filters:** filter-select
+
+**Layouts:** section-title
+
+**Navigation:** app-breadcrumbs, app-tabs, table-pagination
+
 ## Utils
 
 ```tsx

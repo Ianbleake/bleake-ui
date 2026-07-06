@@ -1,5 +1,15 @@
 # @bleakedev/bleake-components
 
+## 0.0.2
+
+### Patch Changes
+
+- Add 8 generic patterns: slide-up, empty, error-boundary, filter-select, section-title, app-breadcrumbs, app-tabs, table-pagination
+  Add react-router as dependency for app-breadcrumbs
+  Fix pre-existing lint issues in separator test and item story
+- Updated dependencies
+  - @bleakedev/bleake-core@0.0.2
+
 ## 0.0.1
 
 ### Patch Changes
