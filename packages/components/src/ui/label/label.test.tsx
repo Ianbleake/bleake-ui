@@ -14,7 +14,10 @@ describe("Label", () => {
 		render(
 			<>
 				<Label htmlFor="test-input">Field</Label>
-				<input id="test-input" type="text" />
+				<input
+					id="test-input"
+					type="text"
+				/>
 			</>,
 		);
 		const label = screen.getByText("Field");

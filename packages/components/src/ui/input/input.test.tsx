@@ -20,7 +20,12 @@ describe("Input", () => {
 
 	it("does not accept input when disabled", async () => {
 		const user = userEvent.setup();
-		render(<Input disabled placeholder="Disabled" />);
+		render(
+			<Input
+				disabled
+				placeholder="Disabled"
+			/>,
+		);
 		const input = screen.getByPlaceholderText("Disabled") as HTMLInputElement;
 		expect(input).toBeDisabled();
 		await user.type(input, "text");
@@ -48,7 +53,12 @@ describe("Input", () => {
 
 	it("forwards ref to the input element", () => {
 		const ref = { current: null };
-		render(<Input ref={ref} placeholder="ref" />);
+		render(
+			<Input
+				ref={ref}
+				placeholder="ref"
+			/>,
+		);
 		expect(ref.current).toBeInstanceOf(HTMLInputElement);
 	});
 });

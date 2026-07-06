@@ -36,7 +36,12 @@ export const Default: Story = {
 				</ItemHeader>
 			</ItemContent>
 			<ItemActions>
-				<button type="button" className="text-sm text-primary">Edit</button>
+				<button
+					type="button"
+					className="text-sm text-primary"
+				>
+					Edit
+				</button>
 			</ItemActions>
 		</Item>
 	),
@@ -44,7 +49,10 @@ export const Default: Story = {
 
 export const OutlineVariant: Story = {
 	render: () => (
-		<Item variant="outline" className="max-w-sm">
+		<Item
+			variant="outline"
+			className="max-w-sm"
+		>
 			<ItemMedia variant="icon">
 				<MailIcon className="size-5" />
 			</ItemMedia>
@@ -60,7 +68,10 @@ export const OutlineVariant: Story = {
 
 export const MutedVariant: Story = {
 	render: () => (
-		<Item variant="muted" className="max-w-sm">
+		<Item
+			variant="muted"
+			className="max-w-sm"
+		>
 			<ItemMedia variant="icon">
 				<CheckIcon className="size-5" />
 			</ItemMedia>
@@ -76,7 +87,11 @@ export const MutedVariant: Story = {
 
 export const Small: Story = {
 	render: () => (
-		<Item size="sm" variant="outline" className="max-w-sm">
+		<Item
+			size="sm"
+			variant="outline"
+			className="max-w-sm"
+		>
 			<ItemMedia variant="icon">
 				<UserIcon className="size-4" />
 			</ItemMedia>
@@ -91,7 +106,11 @@ export const Small: Story = {
 
 export const ExtraSmall: Story = {
 	render: () => (
-		<Item size="xs" variant="muted" className="max-w-sm">
+		<Item
+			size="xs"
+			variant="muted"
+			className="max-w-sm"
+		>
 			<ItemMedia variant="icon">
 				<MailIcon className="size-4" />
 			</ItemMedia>
@@ -106,9 +125,15 @@ export const ExtraSmall: Story = {
 
 export const WithImage: Story = {
 	render: () => (
-		<Item variant="outline" className="max-w-sm">
+		<Item
+			variant="outline"
+			className="max-w-sm"
+		>
 			<ItemMedia variant="image">
-				<img src="https://i.pravatar.cc/100?img=1" alt="avatar" />
+				<img
+					src="https://i.pravatar.cc/100?img=1"
+					alt="avatar"
+				/>
 			</ItemMedia>
 			<ItemContent>
 				<ItemHeader>
@@ -125,18 +150,27 @@ export const WithImage: Story = {
 
 export const AsChild: Story = {
 	render: () => (
-		<Item asChild variant="outline" className="max-w-sm">
-			<a href="#" onClick={(e) => e.preventDefault()}>
+		<Item
+			asChild
+			variant="outline"
+			className="max-w-sm"
+		>
+			<button
+				type="button"
+				onClick={() => {
+					// no-op: demo only
+				}}
+			>
 				<ItemMedia variant="icon">
 					<UserIcon className="size-5" />
 				</ItemMedia>
 				<ItemContent>
 					<ItemHeader>
 						<ItemTitle>Click me</ItemTitle>
-						<ItemDescription>This item is a link</ItemDescription>
+						<ItemDescription>This item is a button</ItemDescription>
 					</ItemHeader>
 				</ItemContent>
-			</a>
+			</button>
 		</Item>
 	),
 };

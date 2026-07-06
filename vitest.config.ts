@@ -9,12 +9,7 @@ export default defineConfig({
 		globals: true,
 		setupFiles: ["./test/setup.ts"],
 		include: ["packages/**/*.test.{ts,tsx}"],
-		exclude: [
-			"**/node_modules/**",
-			"**/dist/**",
-			"**/storybook-static/**",
-			"**/.turbo/**",
-		],
+		exclude: ["**/node_modules/**", "**/dist/**", "**/storybook-static/**", "**/.turbo/**"],
 	},
 	resolve: {
 		alias: {

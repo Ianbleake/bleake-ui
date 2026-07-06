@@ -36,7 +36,10 @@ describe("TruncatedText", () => {
 	it("accepts custom className", () => {
 		render(
 			<TooltipProvider>
-				<TruncatedText text="Custom" className="text-sm" />
+				<TruncatedText
+					text="Custom"
+					className="text-sm"
+				/>
 			</TooltipProvider>,
 		);
 		const span = screen.getByText("Custom");

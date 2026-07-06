@@ -20,7 +20,10 @@ export const Default: Story = {
 		const [checked, setChecked] = useState<boolean>(false);
 		return (
 			<div className="flex items-center gap-4">
-				<Switch checked={checked} onCheckedChange={setChecked} />
+				<Switch
+					checked={checked}
+					onCheckedChange={setChecked}
+				/>
 				<span className="text-sm">{checked ? "On" : "Off"}</span>
 			</div>
 		);
@@ -32,7 +35,11 @@ export const Small: Story = {
 		const [checked, setChecked] = useState<boolean>(false);
 		return (
 			<div className="flex items-center gap-4">
-				<Switch size="sm" checked={checked} onCheckedChange={setChecked} />
+				<Switch
+					size="sm"
+					checked={checked}
+					onCheckedChange={setChecked}
+				/>
 				<span className="text-sm">{checked ? "On" : "Off"}</span>
 			</div>
 		);
@@ -47,7 +54,10 @@ export const Disabled: Story = {
 				<span className="text-sm text-muted-foreground">Disabled off</span>
 			</div>
 			<div className="flex items-center gap-4">
-				<Switch disabled checked />
+				<Switch
+					disabled
+					checked
+				/>
 				<span className="text-sm text-muted-foreground">Disabled on</span>
 			</div>
 		</div>
@@ -59,7 +69,10 @@ export const Controlled: Story = {
 		const [checked, setChecked] = useState<boolean>(true);
 		return (
 			<div className="flex flex-col gap-4">
-				<Switch checked={checked} onCheckedChange={setChecked} />
+				<Switch
+					checked={checked}
+					onCheckedChange={setChecked}
+				/>
 				<button
 					type="button"
 					className="text-sm text-primary"

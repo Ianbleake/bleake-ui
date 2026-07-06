@@ -10,9 +10,15 @@ describe("RadioGroup", () => {
 	it("renders multiple radio items", () => {
 		render(
 			<RadioGroup defaultValue="a">
-				<RadioGroupItem value="a" id="ra" />
+				<RadioGroupItem
+					value="a"
+					id="ra"
+				/>
 				<Label htmlFor="ra">A</Label>
-				<RadioGroupItem value="b" id="rb" />
+				<RadioGroupItem
+					value="b"
+					id="rb"
+				/>
 				<Label htmlFor="rb">B</Label>
 			</RadioGroup>,
 		);
@@ -23,9 +29,15 @@ describe("RadioGroup", () => {
 	it("checks the selected item", () => {
 		render(
 			<RadioGroup defaultValue="b">
-				<RadioGroupItem value="a" id="ra" />
+				<RadioGroupItem
+					value="a"
+					id="ra"
+				/>
 				<Label htmlFor="ra">A</Label>
-				<RadioGroupItem value="b" id="rb" />
+				<RadioGroupItem
+					value="b"
+					id="rb"
+				/>
 				<Label htmlFor="rb">B</Label>
 			</RadioGroup>,
 		);
@@ -38,9 +50,15 @@ describe("RadioGroup", () => {
 		const onChange = vi.fn();
 		render(
 			<RadioGroup onValueChange={onChange}>
-				<RadioGroupItem value="x" id="rx" />
+				<RadioGroupItem
+					value="x"
+					id="rx"
+				/>
 				<Label htmlFor="rx">X</Label>
-				<RadioGroupItem value="y" id="ry" />
+				<RadioGroupItem
+					value="y"
+					id="ry"
+				/>
 				<Label htmlFor="ry">Y</Label>
 			</RadioGroup>,
 		);
@@ -53,10 +71,19 @@ describe("RadioGroup", () => {
 		function Controlled() {
 			const [value, setValue] = useState<string>("x");
 			return (
-				<RadioGroup value={value} onValueChange={setValue}>
-					<RadioGroupItem value="x" id="rx" />
+				<RadioGroup
+					value={value}
+					onValueChange={setValue}
+				>
+					<RadioGroupItem
+						value="x"
+						id="rx"
+					/>
 					<Label htmlFor="rx">X</Label>
-					<RadioGroupItem value="y" id="ry" />
+					<RadioGroupItem
+						value="y"
+						id="ry"
+					/>
 					<Label htmlFor="ry">Y</Label>
 				</RadioGroup>
 			);
@@ -74,7 +101,11 @@ describe("RadioGroup", () => {
 		const onChange = vi.fn();
 		render(
 			<RadioGroup onValueChange={onChange}>
-				<RadioGroupItem value="x" id="rx" disabled />
+				<RadioGroupItem
+					value="x"
+					id="rx"
+					disabled
+				/>
 				<Label htmlFor="rx">X</Label>
 			</RadioGroup>,
 		);

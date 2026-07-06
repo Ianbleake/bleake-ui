@@ -93,7 +93,12 @@ export const Disabled: Story = {
 				</SelectTrigger>
 				<SelectContent>
 					<SelectItem value="apple">Apple</SelectItem>
-					<SelectItem value="banana" disabled>Banana (disabled)</SelectItem>
+					<SelectItem
+						value="banana"
+						disabled
+					>
+						Banana (disabled)
+					</SelectItem>
 					<SelectItem value="orange">Orange</SelectItem>
 				</SelectContent>
 			</Select>

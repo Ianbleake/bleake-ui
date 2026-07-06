@@ -1,5 +1,15 @@
-import { ThemeProvider, useTheme, Button, Card, Input, Label, Badge, Switch, Separator } from "@bleakedev/bleake-ui";
-import { Moon, Sun, Github } from "lucide-react";
+import {
+	Badge,
+	Button,
+	Card,
+	Input,
+	Label,
+	Separator,
+	Switch,
+	ThemeProvider,
+	useTheme,
+} from "@bleakedev/bleake-ui";
+import { Github, Moon, Sun } from "lucide-react";
 import { type ReactElement, useState } from "react";
 
 function ThemeToggle(): ReactElement {
@@ -29,8 +39,16 @@ function Playground(): ReactElement {
 						<Badge variant="secondary">playground</Badge>
 					</div>
 					<div className="flex items-center gap-2">
-						<Button variant="ghost" size="icon" asChild>
-							<a href="https://github.com" target="_blank" rel="noreferrer">
+						<Button
+							variant="ghost"
+							size="icon"
+							asChild
+						>
+							<a
+								href="https://github.com"
+								target="_blank"
+								rel="noreferrer"
+							>
 								<Github className="h-5 w-5" />
 							</a>
 						</Button>
@@ -77,9 +95,7 @@ function Playground(): ReactElement {
 									onChange={(e) => setInputValue(e.target.value)}
 								/>
 								{inputValue && (
-									<p className="text-sm text-muted-foreground">
-										You typed: {inputValue}
-									</p>
+									<p className="text-sm text-muted-foreground">You typed: {inputValue}</p>
 								)}
 							</div>
 							<div className="flex items-center gap-3">
@@ -88,9 +104,7 @@ function Playground(): ReactElement {
 									onCheckedChange={setSwitchOn}
 									id="switch-demo"
 								/>
-								<Label htmlFor="switch-demo">
-									Switch is {switchOn ? "on" : "off"}
-								</Label>
+								<Label htmlFor="switch-demo">Switch is {switchOn ? "on" : "off"}</Label>
 							</div>
 						</div>
 					</Card>
@@ -121,7 +135,11 @@ function Playground(): ReactElement {
 
 export const App = (): ReactElement => {
 	return (
-		<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+		<ThemeProvider
+			attribute="class"
+			defaultTheme="dark"
+			enableSystem
+		>
 			<Playground />
 		</ThemeProvider>
 	);

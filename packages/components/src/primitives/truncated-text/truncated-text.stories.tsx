@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { TruncatedText } from "./index";
 import { TooltipProvider } from "../../ui/tooltip/tooltip-provider";
+import { TruncatedText } from "./index";
 
 const meta: Meta<typeof TruncatedText> = {
 	title: "Design System/Primitives/TruncatedText",

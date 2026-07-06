@@ -16,7 +16,12 @@ describe("Switch", () => {
 		const user = userEvent.setup();
 		function Controlled() {
 			const [checked, setChecked] = useState<boolean>(false);
-			return <Switch checked={checked} onCheckedChange={setChecked} />;
+			return (
+				<Switch
+					checked={checked}
+					onCheckedChange={setChecked}
+				/>
+			);
 		}
 		render(<Controlled />);
 		const sw = screen.getByRole("switch");

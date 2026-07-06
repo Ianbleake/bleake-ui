@@ -38,9 +38,15 @@ export const WithLabel: Story = {
 	render: () => (
 		<div className="flex items-center gap-4">
 			<span className="text-sm font-medium">Settings</span>
-			<Separator orientation="vertical" className="h-4" />
+			<Separator
+				orientation="vertical"
+				className="h-4"
+			/>
 			<span className="text-sm text-muted-foreground">Preferences</span>
-			<Separator orientation="vertical" className="h-4" />
+			<Separator
+				orientation="vertical"
+				className="h-4"
+			/>
 			<span className="text-sm text-muted-foreground">Account</span>
 		</div>
 	),

@@ -9,6 +9,7 @@ export default defineConfig({
 		"react-dom",
 		"@bleakedev/bleake-core",
 		"radix-ui",
+		"react-router",
 		"class-variance-authority",
 		"clsx",
 		"tailwind-merge",
