@@ -1,5 +1,16 @@
 # @bleakedev/bleake-components
 
+## 0.0.4
+
+### Patch Changes
+
+- Add 21 patterns: 6 data-display, 1 filters-wrapper, 14 forms
+  Add useIsMobile hook to core
+  Add react-hook-form and @hookform/resolvers as dependencies
+  Desacoplar: useDownload → onDownload callback, useUploadFile → upload callback, filter-preset hooks → callback props
+- Updated dependencies
+  - @bleakedev/bleake-core@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes
