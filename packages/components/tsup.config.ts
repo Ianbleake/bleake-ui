@@ -21,6 +21,8 @@ export default defineConfig({
 		"framer-motion",
 		"sonner",
 		"date-fns",
+		"react-hook-form",
+		"@hookform/resolvers",
 	],
 	clean: true,
 	treeshake: true,
