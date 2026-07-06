@@ -20,6 +20,7 @@ export default defineConfig({
 		"input-otp",
 		"framer-motion",
 		"sonner",
+		"date-fns",
 	],
 	clean: true,
 	treeshake: true,
