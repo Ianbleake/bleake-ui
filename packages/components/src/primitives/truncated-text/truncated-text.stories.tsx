@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TruncatedText } from "./index";
+import { TooltipProvider } from "../../ui/tooltip/tooltip-provider";
 
 const meta: Meta<typeof TruncatedText> = {
 	title: "Design System/Primitives/TruncatedText",
@@ -8,6 +9,13 @@ const meta: Meta<typeof TruncatedText> = {
 	parameters: {
 		layout: "centered",
 	},
+	decorators: [
+		(Story) => (
+			<TooltipProvider>
+				<Story />
+			</TooltipProvider>
+		),
+	],
 	argTypes: {
 		text: {
 			control: "text",
@@ -48,6 +56,20 @@ export const ShortText: Story = {
 	decorators: [
 		(Story) => (
 			<div className="w-48">
+				<Story />
+			</div>
+		),
+	],
+};
+
+export const CustomWidth: Story = {
+	args: {
+		text: "Hover me to see the full text in a tooltip — this text is very long and will overflow",
+		className: "text-sm text-muted-foreground",
+	},
+	decorators: [
+		(Story) => (
+			<div className="w-32">
 				<Story />
 			</div>
 		),

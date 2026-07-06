@@ -33,3 +33,25 @@ export const Vertical: Story = {
 		</div>
 	),
 };
+
+export const WithLabel: Story = {
+	render: () => (
+		<div className="flex items-center gap-4">
+			<span className="text-sm font-medium">Settings</span>
+			<Separator orientation="vertical" className="h-4" />
+			<span className="text-sm text-muted-foreground">Preferences</span>
+			<Separator orientation="vertical" className="h-4" />
+			<span className="text-sm text-muted-foreground">Account</span>
+		</div>
+	),
+};
+
+export const NonDecorative: Story = {
+	render: () => (
+		<div className="flex flex-col gap-4">
+			<p>Screen reader announcement:</p>
+			<Separator decorative={false} />
+			<p>Section content</p>
+		</div>
+	),
+};
