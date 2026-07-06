@@ -1,5 +1,13 @@
 # @bleakedev/bleake-core
 
+## 0.0.3
+
+### Patch Changes
+
+- Add 6 decoupled patterns: app-toaster, skeletons, filter-date-range-picker, search-filter-select, search-input, landing-layout (slot-based)
+  Add useDebounce and useSearch hooks to core
+  Add date-fns as dependency
+
 ## 0.0.2
 
 ### Patch Changes

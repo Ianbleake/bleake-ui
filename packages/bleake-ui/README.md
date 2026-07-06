@@ -116,17 +116,22 @@ accordion, alert-dialog, avatar, badge, breadcrumb, button-group, button, calend
 
 actions-menu, confirm-dialog, decorative (glow + wave-layer), image, modal, steps, truncated-text
 
-### Patterns (8)
+### Patterns (14)
 
 **Animations:** slide-up
 
-**Feedback:** empty, error-boundary
+**Feedback:** app-toaster, empty, error-boundary, skeletons (app, breadcrumb, button, page-header, page, page-title)
 
-**Filters:** filter-select
+**Filters:** filter-date-range-picker, filter-select, search-filter-select, search-input
 
-**Layouts:** section-title
+**Layouts:** landing-layout (slot-based), section-title
 
 **Navigation:** app-breadcrumbs, app-tabs, table-pagination
+
+### Hooks (2)
+
+- `useDebounce` — debounced value with pending state
+- `useSearch` — search input with debounce + external store sync
 
 ## Utils
 
