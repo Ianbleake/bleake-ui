@@ -118,3 +118,30 @@ export const DirectionLeft: Story = {
 		);
 	},
 };
+
+export const Headless: Story = {
+	render: () => {
+		const [status, setStatus] = useState<string>("all");
+		const hasActiveFilters = status !== "all";
+
+		return (
+			<FiltersWrapper
+				variant="headless"
+				activeFilterCount={hasActiveFilters ? 1 : 0}
+				hasActiveFilters={hasActiveFilters}
+				clearFilters={() => setStatus("all")}
+			>
+				{({ trigger, clear, panel }) =>
+					panel(
+						<FilterSelect
+							options={STATUS_OPTIONS}
+							value={status}
+							onChange={setStatus}
+							placeholder="Status"
+						/>,
+					)
+				}
+			</FiltersWrapper>
+		);
+	},
+};
