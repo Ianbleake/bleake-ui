@@ -1,5 +1,6 @@
 {
-	"buildCommand": "bunx storybook build",
+	"buildCommand": "bunx storybook build --config-dir .storybook",
 	"outputDirectory": "storybook-static",
-	"installCommand": "bun install"
+	"installCommand": "bun install",
+	"framework": null
 }
