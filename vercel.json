@@ -1,0 +1,5 @@
+{
+	"buildCommand": "bunx storybook build",
+	"outputDirectory": "storybook-static",
+	"installCommand": "bun install"
+}
