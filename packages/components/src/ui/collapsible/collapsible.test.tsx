@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
-import { Collapsible } from "./index";
 import { CollapsibleContent } from "./collapsible-content";
 import { CollapsibleTrigger } from "./collapsible-trigger";
+import { Collapsible } from "./index";
 
 describe("Collapsible", () => {
 	it("renders trigger", () => {

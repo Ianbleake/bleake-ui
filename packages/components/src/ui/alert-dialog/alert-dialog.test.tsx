@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { AlertDialog } from "./index";
-import { AlertDialogTrigger } from "./alert-dialog-trigger";
 import { AlertDialogContent } from "./alert-dialog-content";
 import { AlertDialogTitle } from "./alert-dialog-title";
+import { AlertDialogTrigger } from "./alert-dialog-trigger";
+import { AlertDialog } from "./index";
 
 describe("AlertDialog", () => {
 	it("does not show content when closed", () => {

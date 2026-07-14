@@ -131,7 +131,7 @@ export const Headless: Story = {
 				hasActiveFilters={hasActiveFilters}
 				clearFilters={() => setStatus("all")}
 			>
-				{({ trigger, clear, panel }) =>
+				{({ trigger: _trigger, clear: _clear, panel }) =>
 					panel(
 						<FilterSelect
 							options={STATUS_OPTIONS}

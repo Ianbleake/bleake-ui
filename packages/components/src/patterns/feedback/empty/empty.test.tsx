@@ -6,13 +6,23 @@ import { Empty } from "./index";
 
 describe("Empty", () => {
 	it("renders title and description", () => {
-		render(<Empty title="No results" description="Try adjusting your filters" />);
+		render(
+			<Empty
+				title="No results"
+				description="Try adjusting your filters"
+			/>,
+		);
 		expect(screen.getByText("No results")).toBeInTheDocument();
 		expect(screen.getByText("Try adjusting your filters")).toBeInTheDocument();
 	});
 
 	it("renders icon when provided", () => {
-		render(<Empty title="Empty" icon={FileIcon} />);
+		render(
+			<Empty
+				title="Empty"
+				icon={FileIcon}
+			/>,
+		);
 		expect(document.querySelector("svg")).toBeInTheDocument();
 	});
 
@@ -20,7 +30,12 @@ describe("Empty", () => {
 		render(
 			<Empty
 				title="No items"
-				action={{ label: "Create one", onClick: () => {} }}
+				action={{
+					label: "Create one",
+					onClick: () => {
+						/* no-op */
+					},
+				}}
 			/>,
 		);
 		expect(screen.getByText("Create one")).toBeInTheDocument();

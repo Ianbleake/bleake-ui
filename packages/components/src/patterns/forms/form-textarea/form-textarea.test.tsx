@@ -8,7 +8,14 @@ describe("FormTextarea", () => {
 	it("renders label and textarea", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { bio: "" } });
-			return <FormTextarea label="Bio" name="bio" form={form} placeholder="Tell us about you" />;
+			return (
+				<FormTextarea
+					label="Bio"
+					name="bio"
+					form={form}
+					placeholder="Tell us about you"
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByText("Bio")).toBeInTheDocument();
@@ -19,7 +26,14 @@ describe("FormTextarea", () => {
 		const user = userEvent.setup();
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { bio: "" } });
-			return <FormTextarea label="Bio" name="bio" form={form} placeholder="Type" />;
+			return (
+				<FormTextarea
+					label="Bio"
+					name="bio"
+					form={form}
+					placeholder="Type"
+				/>
+			);
 		};
 		render(<Wrapper />);
 		const ta = screen.getByPlaceholderText("Type") as HTMLTextAreaElement;
@@ -30,7 +44,14 @@ describe("FormTextarea", () => {
 	it("renders required marker", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { bio: "" } });
-			return <FormTextarea label="Bio" name="bio" form={form} required />;
+			return (
+				<FormTextarea
+					label="Bio"
+					name="bio"
+					form={form}
+					required
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByText("*")).toBeInTheDocument();
@@ -55,7 +76,14 @@ describe("FormTextarea", () => {
 	it("renders optional marker", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { bio: "" } });
-			return <FormTextarea label="Bio" name="bio" form={form} optional />;
+			return (
+				<FormTextarea
+					label="Bio"
+					name="bio"
+					form={form}
+					optional
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByText("Opcional")).toBeInTheDocument();
@@ -64,7 +92,13 @@ describe("FormTextarea", () => {
 	it("shows default value from form", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { bio: "Pre-filled bio" } });
-			return <FormTextarea label="Bio" name="bio" form={form} />;
+			return (
+				<FormTextarea
+					label="Bio"
+					name="bio"
+					form={form}
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByDisplayValue("Pre-filled bio")).toBeInTheDocument();

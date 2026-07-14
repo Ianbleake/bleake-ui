@@ -17,7 +17,10 @@ describe("InfoItem", () => {
 
 	it("renders with children instead of value", () => {
 		render(
-			<InfoItem icon={UserIcon} label="Custom">
+			<InfoItem
+				icon={UserIcon}
+				label="Custom"
+			>
 				<span>Custom content</span>
 			</InfoItem>,
 		);
@@ -26,14 +29,21 @@ describe("InfoItem", () => {
 
 	it("renders label when provided", () => {
 		render(
-			<InfoItem icon={UserIcon} label="Email" value="test@test.com" />,
+			<InfoItem
+				icon={UserIcon}
+				label="Email"
+				value="test@test.com"
+			/>,
 		);
 		expect(screen.getByText("Email")).toBeInTheDocument();
 	});
 
 	it("renders icon", () => {
 		render(
-			<InfoItem icon={UserIcon} value="John" />,
+			<InfoItem
+				icon={UserIcon}
+				value="John"
+			/>,
 		);
 		expect(document.querySelector("svg")).toBeInTheDocument();
 	});

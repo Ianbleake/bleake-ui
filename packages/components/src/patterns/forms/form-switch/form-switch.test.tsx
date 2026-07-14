@@ -8,7 +8,13 @@ describe("FormSwitch", () => {
 	it("renders label and switch", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { notifications: false } });
-			return <FormSwitch label="Notifications" name="notifications" form={form} />;
+			return (
+				<FormSwitch
+					label="Notifications"
+					name="notifications"
+					form={form}
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByText("Notifications")).toBeInTheDocument();
@@ -18,7 +24,13 @@ describe("FormSwitch", () => {
 	it("starts unchecked with false default", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { notifications: false } });
-			return <FormSwitch label="Notifications" name="notifications" form={form} />;
+			return (
+				<FormSwitch
+					label="Notifications"
+					name="notifications"
+					form={form}
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByRole("switch")).toHaveAttribute("data-state", "unchecked");
@@ -27,7 +39,13 @@ describe("FormSwitch", () => {
 	it("starts checked with true default", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { notifications: true } });
-			return <FormSwitch label="Notifications" name="notifications" form={form} />;
+			return (
+				<FormSwitch
+					label="Notifications"
+					name="notifications"
+					form={form}
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByRole("switch")).toHaveAttribute("data-state", "checked");
@@ -37,7 +55,13 @@ describe("FormSwitch", () => {
 		const user = userEvent.setup();
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { notifications: false } });
-			return <FormSwitch label="Notifications" name="notifications" form={form} />;
+			return (
+				<FormSwitch
+					label="Notifications"
+					name="notifications"
+					form={form}
+				/>
+			);
 		};
 		render(<Wrapper />);
 		const sw = screen.getByRole("switch");

@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { Card } from "./index";
 import { CardContent } from "./card-content";
 import { CardDescription } from "./card-description";
 import { CardFooter } from "./card-footer";
 import { CardHeader } from "./card-header";
 import { CardTitle } from "./card-title";
+import { Card } from "./index";
 
 describe("Card", () => {
 	it("renders children", () => {

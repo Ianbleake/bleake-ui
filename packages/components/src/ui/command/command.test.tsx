@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
-import { Command } from "./index";
 import { CommandInput } from "./command-input";
 import { CommandItem } from "./command-item";
 import { CommandList } from "./command-list";
+import { Command } from "./index";
 
 describe("Command", () => {
 	it("renders input and items", () => {
