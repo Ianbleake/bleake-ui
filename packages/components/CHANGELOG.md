@@ -1,5 +1,15 @@
 # @bleakedev/bleake-components
 
+## 0.0.5
+
+### Patch Changes
+
+- Add form-field stories (10) and filters-wrapper headless story
+  Add 133 tests across 4 batches (22 UI components, 8 patterns, 6 forms)
+  Add jsdom mocks for ResizeObserver, IntersectionObserver, matchMedia, scrollIntoView
+- Updated dependencies
+  - @bleakedev/bleake-core@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes
