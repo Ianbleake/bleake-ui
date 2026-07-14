@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
-import { Accordion } from "./index";
 import { AccordionContent } from "./accordion-content";
 import { AccordionItem } from "./accordion-item";
 import { AccordionTrigger } from "./accordion-trigger";
+import { Accordion } from "./index";
 
 describe("Accordion", () => {
 	it("renders trigger elements", () => {

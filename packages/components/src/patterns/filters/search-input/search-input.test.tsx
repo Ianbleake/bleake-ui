@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { useState } from "react";
 import { describe, expect, it } from "vitest";
 import { SearchInput } from "./index";
 
@@ -9,7 +8,9 @@ describe("SearchInput", () => {
 		render(
 			<SearchInput
 				value={undefined}
-				onCommit={() => {}}
+				onCommit={() => {
+					/* no-op */
+				}}
 				placeholder="Search items..."
 			/>,
 		);
@@ -18,7 +19,12 @@ describe("SearchInput", () => {
 
 	it("displays icon", () => {
 		render(
-			<SearchInput value="" onCommit={() => {}} />,
+			<SearchInput
+				value=""
+				onCommit={() => {
+					/* no-op */
+				}}
+			/>,
 		);
 		expect(document.querySelector("svg")).toBeInTheDocument();
 	});
@@ -26,7 +32,13 @@ describe("SearchInput", () => {
 	it("accepts typed input", async () => {
 		const user = userEvent.setup();
 		render(
-			<SearchInput value="" onCommit={() => {}} placeholder="Type" />,
+			<SearchInput
+				value=""
+				onCommit={() => {
+					/* no-op */
+				}}
+				placeholder="Type"
+			/>,
 		);
 		const input = screen.getByPlaceholderText("Type") as HTMLInputElement;
 		await user.type(input, "hello");
@@ -37,7 +49,11 @@ describe("SearchInput", () => {
 		const user = userEvent.setup();
 		const onCommit = vi.fn();
 		render(
-			<SearchInput value="" onCommit={onCommit} placeholder="Search" />,
+			<SearchInput
+				value=""
+				onCommit={onCommit}
+				placeholder="Search"
+			/>,
 		);
 		const input = screen.getByPlaceholderText("Search");
 		await user.type(input, "test");

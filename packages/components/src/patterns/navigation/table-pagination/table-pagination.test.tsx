@@ -9,7 +9,9 @@ describe("TablePagination", () => {
 			<TablePagination
 				page={1}
 				totalPages={5}
-				onPageChange={() => {}}
+				onPageChange={() => {
+					/* no-op */
+				}}
 			/>,
 		);
 		expect(screen.getByText(/1/)).toBeInTheDocument();
@@ -26,7 +28,8 @@ describe("TablePagination", () => {
 				onPageChange={onPageChange}
 			/>,
 		);
-		const nextButton = screen.getByLabelText(/next|siguiente|chevronright/i) ?? screen.getAllByRole("button").pop();
+		const nextButton =
+			screen.getByLabelText(/next|siguiente|chevronright/i) ?? screen.getAllByRole("button").pop();
 		expect(nextButton).toBeDefined();
 		await user.click(nextButton);
 		expect(onPageChange).toHaveBeenCalled();
@@ -37,7 +40,9 @@ describe("TablePagination", () => {
 			<TablePagination
 				page={1}
 				totalPages={5}
-				onPageChange={() => {}}
+				onPageChange={() => {
+					/* no-op */
+				}}
 			/>,
 		);
 		const buttons = screen.getAllByRole("button");
@@ -50,7 +55,9 @@ describe("TablePagination", () => {
 			<TablePagination
 				page={5}
 				totalPages={5}
-				onPageChange={() => {}}
+				onPageChange={() => {
+					/* no-op */
+				}}
 			/>,
 		);
 		const buttons = screen.getAllByRole("button");

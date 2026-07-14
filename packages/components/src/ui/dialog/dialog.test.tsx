@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
-import { Dialog } from "./index";
 import { DialogContent } from "./dialog-content";
-import { DialogTrigger } from "./dialog-trigger";
-import { DialogTitle } from "./dialog-title";
 import { DialogDescription } from "./dialog-description";
+import { DialogTitle } from "./dialog-title";
+import { DialogTrigger } from "./dialog-trigger";
+import { Dialog } from "./index";
 
 describe("Dialog", () => {
 	it("does not show content when closed", () => {

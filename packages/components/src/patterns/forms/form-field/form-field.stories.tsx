@@ -84,7 +84,7 @@ export const Phone: Story = {
 	},
 };
 
-export const Number: Story = {
+export const NumberInput: Story = {
 	render: () => {
 		const form = useForm({ defaultValues: { amount: 0 } });
 		return (

@@ -19,7 +19,12 @@ describe("Textarea", () => {
 
 	it("does not accept input when disabled", async () => {
 		const user = userEvent.setup();
-		render(<Textarea disabled placeholder="Disabled" />);
+		render(
+			<Textarea
+				disabled
+				placeholder="Disabled"
+			/>,
+		);
 		const ta = screen.getByPlaceholderText("Disabled") as HTMLTextAreaElement;
 		expect(ta).toBeDisabled();
 		await user.type(ta, "text");
@@ -27,7 +32,12 @@ describe("Textarea", () => {
 	});
 
 	it("accepts custom className", () => {
-		render(<Textarea className="custom-ta" placeholder="TA" />);
+		render(
+			<Textarea
+				className="custom-ta"
+				placeholder="TA"
+			/>,
+		);
 		expect(screen.getByPlaceholderText("TA").className).toContain("custom-ta");
 	});
 

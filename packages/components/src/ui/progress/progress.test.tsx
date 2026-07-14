@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { Progress } from "./index";
 
@@ -14,7 +14,12 @@ describe("Progress", () => {
 	});
 
 	it("accepts custom className", () => {
-		const { container } = render(<Progress value={50} className="custom-class" />);
+		const { container } = render(
+			<Progress
+				value={50}
+				className="custom-class"
+			/>,
+		);
 		expect(container.firstChild).toHaveClass("custom-class");
 	});
 

@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import { FilterSelect } from "./index";
 
@@ -36,7 +35,9 @@ describe("FilterSelect", () => {
 			<FilterSelect
 				options={OPTIONS}
 				value="active"
-				onChange={() => {}}
+				onChange={() => {
+					// no-op: test only verifies render
+				}}
 			/>,
 		);
 		expect(screen.getByText("Active")).toBeInTheDocument();

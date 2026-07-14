@@ -8,7 +8,14 @@ describe("FormField", () => {
 	it("renders label and input for text type", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { name: "" } });
-			return <FormField label="Name" name="name" form={form} placeholder="Enter name" />;
+			return (
+				<FormField
+					label="Name"
+					name="name"
+					form={form}
+					placeholder="Enter name"
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByText("Name")).toBeInTheDocument();
@@ -18,7 +25,15 @@ describe("FormField", () => {
 	it("renders required marker", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { email: "" } });
-			return <FormField label="Email" name="email" form={form} type="email" required />;
+			return (
+				<FormField
+					label="Email"
+					name="email"
+					form={form}
+					type="email"
+					required
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByText("*")).toBeInTheDocument();
@@ -27,7 +42,14 @@ describe("FormField", () => {
 	it("renders optional marker", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { nickname: "" } });
-			return <FormField label="Nickname" name="nickname" form={form} optional />;
+			return (
+				<FormField
+					label="Nickname"
+					name="nickname"
+					form={form}
+					optional
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByText("Opcional")).toBeInTheDocument();
@@ -93,7 +115,14 @@ describe("FormField", () => {
 		const user = userEvent.setup();
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { name: "" } });
-			return <FormField label="Name" name="name" form={form} placeholder="Type" />;
+			return (
+				<FormField
+					label="Name"
+					name="name"
+					form={form}
+					placeholder="Type"
+				/>
+			);
 		};
 		render(<Wrapper />);
 		const input = screen.getByPlaceholderText("Type");
@@ -104,7 +133,14 @@ describe("FormField", () => {
 	it("renders disabled input", () => {
 		const Wrapper = () => {
 			const form = useForm({ defaultValues: { code: "ABC" } });
-			return <FormField label="Code" name="code" form={form} disabled />;
+			return (
+				<FormField
+					label="Code"
+					name="code"
+					form={form}
+					disabled
+				/>
+			);
 		};
 		render(<Wrapper />);
 		expect(screen.getByDisplayValue("ABC")).toBeDisabled();

@@ -60,7 +60,10 @@ describe("Tabs", () => {
 		const user = userEvent.setup();
 		const onValueChange = vi.fn();
 		render(
-			<Tabs onValueChange={onValueChange} defaultValue="tab1">
+			<Tabs
+				onValueChange={onValueChange}
+				defaultValue="tab1"
+			>
 				<TabsList>
 					<TabsTrigger value="tab1">First</TabsTrigger>
 					<TabsTrigger value="tab2">Second</TabsTrigger>

@@ -1,5 +1,6 @@
 {
-	"buildCommand": "bunx storybook build",
+	"buildCommand": "bash scripts/vercel-build.sh",
 	"outputDirectory": "storybook-static",
-	"installCommand": "bun install"
+	"installCommand": "bun install",
+	"framework": null
 }

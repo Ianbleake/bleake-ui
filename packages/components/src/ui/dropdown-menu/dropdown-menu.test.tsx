@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
-import { DropdownMenu } from "./index";
 import { DropdownMenuContent } from "./dropdown-menu-content";
 import { DropdownMenuItem } from "./dropdown-menu-item";
 import { DropdownMenuTrigger } from "./dropdown-menu-trigger";
+import { DropdownMenu } from "./index";
 
 describe("DropdownMenu", () => {
 	it("renders trigger", () => {
