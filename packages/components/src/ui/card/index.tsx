@@ -1,6 +1,13 @@
 import { merge } from "@bleakedev/bleake-core";
 import type React from "react";
 
+export { CardAction } from "./card-action";
+export { CardContent } from "./card-content";
+export { CardDescription } from "./card-description";
+export { CardFooter } from "./card-footer";
+export { CardHeader } from "./card-header";
+export { CardTitle } from "./card-title";
+
 export const Card = ({
 	className,
 	size = "default",

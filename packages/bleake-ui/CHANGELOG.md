@@ -1,5 +1,18 @@
 # @bleakedev/bleake-ui
 
+## 0.0.8
+
+### Patch Changes
+
+- Fix: export sub-components from card, tabs, accordion barrels
+  CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardAction
+  TabsList, TabsTrigger, TabsContent
+  AccordionItem, AccordionTrigger, AccordionContent
+- Updated dependencies
+  - @bleakedev/bleake-core@0.0.8
+  - @bleakedev/bleake-components@0.0.8
+  - @bleakedev/bleake-styles@0.0.8
+
 ## 0.0.7
 
 ### Patch Changes

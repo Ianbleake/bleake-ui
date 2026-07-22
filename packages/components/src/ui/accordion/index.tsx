@@ -2,6 +2,10 @@ import { merge } from "@bleakedev/bleake-core";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import type React from "react";
 
+export { AccordionContent } from "./accordion-content";
+export { AccordionItem } from "./accordion-item";
+export { AccordionTrigger } from "./accordion-trigger";
+
 export const Accordion = ({
 	className,
 	...props
