@@ -1,5 +1,13 @@
 # @bleakedev/bleake-core
 
+## 0.0.6
+
+### Patch Changes
+
+- Fix: workspace:_ not resolved to real versions on npm publish
+  Changed publish command from npm publish --workspaces to changeset publish
+  which converts workspace:_ to actual version numbers before publishing
+
 ## 0.0.5
 
 ### Patch Changes

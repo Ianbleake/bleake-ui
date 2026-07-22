@@ -20,7 +20,7 @@
 		"test:watch": "vitest",
 		"changeset": "changeset",
 		"version-packages": "changeset version",
-		"release": "bun run build && npm publish --workspaces --access public",
+		"release": "bun run build && bunx changeset publish --access public",
 		"clean": "rm -rf packages/*/dist apps/*/dist .turbo node_modules/.cache storybook-static"
 	},
 	"devDependencies": {
