@@ -1,5 +1,14 @@
 # @bleakedev/bleake-components
 
+## 0.0.7
+
+### Patch Changes
+
+- Fix: workspace:_ now replaced with real versions before publish
+  Added pre-publish script that converts workspace:_ to ^version
+- Updated dependencies
+  - @bleakedev/bleake-core@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes
